@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Dokumentasi & Prestasi - Arok Taekwondo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+    .navbar-text {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 10px;
+    }
+    .navbar-text:hover {
+        transform: translateY(-3px);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    }
+    .hover-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 15px;
+    }
+    .hover-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 25px rgba(0,0,0,0.4) !important;
+        background-color: rgba(255, 255, 255, 0.15) !important;
+    }
+    /* Tema Sporty (Gelap-Merah) */
+    .bg-gradient-sport {
+        background: linear-gradient(#1a1a1a, #4a0e0e, #1a1a1a);
+    }
+    </style>
+</head>
+<body class="d-flex flex-column bg-gradient-sport" style="min-height: 100vh; font-family: 'Inter', sans-serif;">
+    
+    <!-- Navbar Responsif -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark" style="background-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+      <div class="container-fluid px-4 px-md-5"> <!-- Jarak margin kiri-kanan yang responsif -->
+        
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/logo-head.png" alt="Arok Taekwondo Logo" style="width: 60px">
+        </a>
+
+        <!-- Tombol Hamburger untuk Mobile -->
+        <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu Navigasi (Bungkus pembuka tutup menu) -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav gap-2 gap-lg-3 text-center mt-3 mt-lg-0" style="font-size: 18px;">
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text" href="index.html#profile">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text" href="index.html#structure">Coaches</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text" href="index.html#classes">Classes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text fw-bold border-bottom border-2" href="index.html#events">Achievements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text" href="index.html#progress">Progress</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text" href="index.html#contacts">Contacts</a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+
+    <!-- Header Halaman -->
+    <div class="container text-white text-center mt-5 pt-3 mb-5">
+        <h1 class="display-4 fw-bold" style="font-family: 'Inter', sans-serif;">Dokumentasi & Prestasi</h1>
+        <p class="fs-5 opacity-75 mt-3">Rekam jejak perjalanan, kejuaraan, dan momen kebersamaan keluarga besar Arok Taekwondo.</p>
+    </div>
+
+    <!-- List Prestasi Memanjang Ke Bawah -->
+    <div class="container pb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+
+                <!-- Item 1: Kejuaraan (Kejurkot) -->
+                <div class="card mb-4 bg-transparent border-0">
+                    <div class="row g-0 bg-white bg-opacity-10 border border-white border-opacity-25 rounded-4 overflow-hidden shadow hover-card" style="transition: all 0.3s ease;">
+                        <div class="col-md-5">
+                            <img src="assets/dummy-pict.JPG" class="img-fluid h-100 w-100" style="object-fit: cover; min-height: 250px;" alt="Juara Umum Kejurkot">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body p-4 p-md-5 d-flex flex-column h-100 text-white">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h3 class="card-title fw-bold mb-0">Juara Umum Kejurkot Malang</h3>
+                                    <span class="badge bg-danger text-white rounded-pill px-3 py-2">Kejuaraan</span>
+                                </div>
+                                <p class="text-warning fw-bold small mb-3"><i class="far fa-calendar-alt me-2"></i>Agustus 2026</p>
+                                <p class="card-text opacity-75 mb-4">
+                                    Kontingen Arok Taekwondo berhasil menorehkan prestasi gemilang dengan membawa pulang total 5 Medali Emas, 3 Perak, dan 2 Perunggu, sekaligus mengamankan piala Juara Umum kategori Kyorugi tingkat Kota Malang.
+                                </p>
+                                <!-- Action Button -->
+                                <div class="mt-auto text-end">
+                                    <a href="event-detail.html" class="btn btn-outline-light rounded-pill px-4 py-2 fw-bold">
+                                        Lihat Detail Medali <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Ujian Kenaikan Tingkat (UKT) -->
+                <div class="card mb-4 bg-transparent border-0">
+                    <div class="row g-0 bg-white bg-opacity-10 border border-white border-opacity-25 rounded-4 overflow-hidden shadow hover-card" style="transition: all 0.3s ease;">
+                        <div class="col-md-5">
+                            <img src="assets/dummy-pict.JPG" class="img-fluid h-100 w-100" style="object-fit: cover; min-height: 250px;" alt="UKT Periode I">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body p-4 p-md-5 d-flex flex-column h-100 text-white">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h3 class="card-title fw-bold mb-0">Ujian Kenaikan Tingkat (UKT)</h3>
+                                    <span class="badge bg-success text-white rounded-pill px-3 py-2">Ujian Sabuk</span>
+                                </div>
+                                <p class="text-warning fw-bold small mb-3"><i class="far fa-calendar-alt me-2"></i>Mei 2026</p>
+                                <p class="card-text opacity-75 mb-4">
+                                    Evaluasi kemampuan fisik, penguasaan jurus (Poomsae), dan teknik pemecahan papan (Kyokpa). Sebanyak 120 siswa Arok Taekwondo dinyatakan lulus 100% dan berhak mengenakan sabuk tingkat selanjutnya.
+                                </p>
+                                <!-- Action Button -->
+                                <div class="mt-auto text-end">
+                                    <a href="event-detail.html" class="btn btn-outline-light rounded-pill px-4 py-2 fw-bold">
+                                        Galeri Kelulusan <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Prestasi Individu / Liga -->
+                <div class="card mb-4 bg-transparent border-0">
+                    <div class="row g-0 bg-white bg-opacity-10 border border-white border-opacity-25 rounded-4 overflow-hidden shadow hover-card" style="transition: all 0.3s ease;">
+                        <div class="col-md-5">
+                            <img src="assets/dummy-pict.JPG" class="img-fluid h-100 w-100" style="object-fit: cover; min-height: 250px;" alt="Atlet Terbaik Putra">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body p-4 p-md-5 d-flex flex-column h-100 text-white">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h3 class="card-title fw-bold mb-0">Atlet Terbaik Putra Kyorugi Senior</h3>
+                                    <span class="badge bg-info text-dark rounded-pill px-3 py-2">Penghargaan</span>
+                                </div>
+                                <p class="text-warning fw-bold small mb-3"><i class="far fa-calendar-alt me-2"></i>Februari 2026</p>
+                                <p class="card-text opacity-75 mb-4">
+                                    Salah satu atlet dari kelas Training Camp (TC) Arok Taekwondo berhasil meraih gelar Atlet Terbaik Putra pada kejuaraan Liga Mahasiswa tingkat Provinsi Jawa Timur atas eksekusi jurus yang sempurna.
+                                </p>
+                                <!-- Action Button -->
+                                <div class="mt-auto text-end">
+                                    <a href="event-detail.html" class="btn btn-outline-light rounded-pill px-4 py-2 fw-bold">
+                                        Lihat Profil Atlet <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: Kegiatan Bersama / Latih Tanding -->
+                <div class="card mb-4 bg-transparent border-0">
+                    <div class="row g-0 bg-white bg-opacity-10 border border-white border-opacity-25 rounded-4 overflow-hidden shadow hover-card" style="transition: all 0.3s ease;">
+                        <div class="col-md-5">
+                            <img src="assets/dummy-pict.JPG" class="img-fluid h-100 w-100" style="object-fit: cover; min-height: 250px;" alt="Holiday Camp">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body p-4 p-md-5 d-flex flex-column h-100 text-white">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h3 class="card-title fw-bold mb-0">Holiday Camp & Latih Tanding</h3>
+                                    <span class="badge bg-primary text-white rounded-pill px-3 py-2">Kegiatan Bersama</span>
+                                </div>
+                                <p class="text-warning fw-bold small mb-3"><i class="far fa-calendar-alt me-2"></i>Desember 2025</p>
+                                <p class="card-text opacity-75 mb-4">
+                                    Mengisi waktu liburan akhir tahun dengan kegiatan positif. Kami mengadakan sesi latihan fisik luar ruangan dan uji tanding (sparring persahabatan) bersama Lutador Taekwondo Academy dan Lion Taekwondo Club.
+                                </p>
+                                <!-- Action Button -->
+                                <div class="mt-auto text-end">
+                                    <a href="event-detail.html" class="btn btn-outline-light rounded-pill px-4 py-2 fw-bold">
+                                        Lihat Keseruan <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination (Opsional jika datanya banyak nantinya) -->
+                <nav aria-label="Page navigation" class="mt-5 pt-3">
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                      <a class="page-link bg-transparent text-white-50 border-white border-opacity-25" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link bg-danger border-danger text-white" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link bg-transparent text-white border-white border-opacity-25" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link bg-transparent text-white border-white border-opacity-25" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link bg-transparent text-white border-white border-opacity-25" href="#">Next</a>
+                    </li>
+                  </ul>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center bg-white mt-auto w-100">
+        <div class="text-center p-3 text-dark">
+            © 2026 Copyright <strong>Arok Taekwondo</strong> - All rights reserved.
+        </div>
+    </footer>
+    
+</body>
+</html>

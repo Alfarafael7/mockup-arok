@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Training Camp - Arok Taekwondo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+    .navbar-text {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 10px;
+    }
+    .navbar-text:hover {
+        transform: translateY(-3px);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    }
+    .hover-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 10px;
+    }
+    .hover-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+    /* Tema Sporty (Gelap-Merah) */
+    .bg-gradient-sport {
+        background: linear-gradient(#1a1a1a, #4a0e0e, #1a1a1a);
+    }
+    </style>
+</head>
+<body class="d-flex flex-column bg-gradient-sport" style="min-height: 100vh; font-family: 'Inter', sans-serif;">
+    
+    <!-- Navbar Responsif -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark" style="background-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+      <div class="container-fluid px-4 px-md-5"> <!-- Jarak margin kiri-kanan yang responsif -->
+        
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/logo-head.png" alt="Arok Taekwondo Logo" style="width: 60px">
+        </a>
+
+        <!-- Tombol Hamburger untuk Mobile -->
+        <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu Navigasi (Bungkus pembuka tutup menu) -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav gap-2 gap-lg-3 text-center mt-3 mt-lg-0" style="font-size: 18px;">
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text" href="index.html#profile">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text" href="index.html#structure">Coaches</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text fw-bold border-bottom border-2" href="index.html#classes">Classes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text" href="index.html#events">Achievements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text" href="index.html#progress">Progress</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text" href="index.html#contacts">Contacts</a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+
+    <!-- Header & Carousel Dokumentasi -->
+    <div class="container mt-5 pt-3">
+        <h1 class="display-4 fw-bold text-white text-center mb-2" style="font-family: 'Inter', sans-serif;">Training Camp</h1>
+        <p class="text-center text-white-50 mb-5 fs-5">Pemusatan latihan intensif untuk mencetak atlet juara.</p>
+        
+        <!-- Carousel 16:9 -->
+        <div id="classCarousel" class="carousel slide carousel-fade shadow-lg rounded-4 overflow-hidden mx-auto" data-bs-ride="carousel" style="max-width: 1000px; aspect-ratio: 16/9;">
+            <div class="carousel-inner h-100">
+                <div class="carousel-item active h-100">
+                    <img src="assets/foto-latgab-dummy.JPG" class="w-100 h-100" style="object-fit: cover;" alt="Dokumentasi Training Camp 1">
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="assets/foto-supcadet-dummy.JPG" class="w-100 h-100" style="object-fit: cover;" alt="Dokumentasi Training Camp 2">
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="assets/foto-cajunsen-dummy.JPG" class="w-100 h-100" style="object-fit: cover;" alt="Dokumentasi Training Camp 3">
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#classCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#classCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Deskripsi & Pilihan Kelas -->
+    <div class="container mt-5 mb-5 pb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                
+                <div class="text-white text-center mb-5 px-md-4">
+                    <p class="fs-5" style="line-height: 1.8; opacity: 0.85;">
+                        <i>Training Camp</i> (TC) dirancang khusus bagi atlet terpilih yang berkomitmen penuh untuk mewakili Arok Taekwondo di berbagai kejuaraan. Latihan ini memiliki intensitas tinggi yang berfokus pada simulasi pertandingan, pemantapan teknik tingkat lanjut, serta kekuatan fisik yang dibimbing langsung oleh jajaran pelatih spesialis.
+                    </p>
+                </div>
+
+                <!-- Card Pilihan Kelas (Grid 2x2) -->
+                <div class="row g-4">
+                    
+                    <!-- 1. TC Poomsae & Prestasi -->
+                    <div class="col-md-6">
+                        <div class="card bg-white bg-opacity-10 border-white border-opacity-25 h-100 p-4 text-white hover-card shadow d-flex flex-column">
+                            <div class="d-flex align-items-start justify-content-between mb-3 flex-wrap gap-2">
+                                <h3 class="fw-bold mb-0">TC Poomsae</h3>
+                                <span class="badge bg-warning text-dark px-3 py-2 fs-7 rounded-pill">Seni Jurus</span>
+                            </div>
+                            <hr class="border-white border-opacity-25 mt-2">
+                            <p class="opacity-75 mb-4">
+                                Pemusatan latihan khusus seni jurus (Poomsae), mulai dari pembenahan kuda-kuda dasar hingga teknik eksekusi jurus tingkat lanjut untuk kelas prestasi.
+                            </p>
+                            
+                            <div class="mt-auto bg-dark bg-opacity-50 rounded p-3 border border-white border-opacity-10">
+                                <h6 class="text-danger fw-bold mb-2"><i class="far fa-calendar-alt me-2"></i>JADWAL & LOKASI</h6>
+                                <p class="mb-1 small"><i class="fas fa-check-circle text-success me-2"></i>Senin (15.30 - 17.30) - <strong>Poomsae Dasar</strong></p>
+                                <p class="mb-2 small"><i class="fas fa-check-circle text-success me-2"></i>Selasa (15.30 - 17.30) - <strong>Poomsae Prestasi</strong></p>
+                                <p class="mb-0 text-white-50 small"><i class="fas fa-map-marker-alt text-danger me-2"></i>Arok Sports Arena</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. TC Kyorugi & Prestasi -->
+                    <div class="col-md-6">
+                        <div class="card bg-white bg-opacity-10 border-white border-opacity-25 h-100 p-4 text-white hover-card shadow d-flex flex-column">
+                            <div class="d-flex align-items-start justify-content-between mb-3 flex-wrap gap-2">
+                                <h3 class="fw-bold mb-0">TC Kyorugi</h3>
+                                <span class="badge bg-danger text-white px-3 py-2 fs-7 rounded-pill">Teknik Bertarung</span>
+                            </div>
+                            <hr class="border-white border-opacity-25 mt-2">
+                            <p class="opacity-75 mb-4">
+                                Latihan intensif teknik bertarung. Fokus pada kecepatan serangan balik, kombinasi tendangan tingkat lanjut, penguasaan jarak tempur, dan taktik strategi di atas matras.
+                            </p>
+                            
+                            <div class="mt-auto bg-dark bg-opacity-50 rounded p-3 border border-white border-opacity-10">
+                                <h6 class="text-danger fw-bold mb-2"><i class="far fa-calendar-alt me-2"></i>JADWAL & LOKASI</h6>
+                                <p class="mb-1 small"><i class="fas fa-check-circle text-success me-2"></i>Selasa (18.30 - 20.30) - <strong>Kyorugi Dasar</strong></p>
+                                <p class="mb-2 small"><i class="fas fa-check-circle text-success me-2"></i>Kamis (18.30 - 20.30) - <strong>Kyorugi Prestasi</strong></p>
+                                <p class="mb-0 text-white-50 small"><i class="fas fa-map-marker-alt text-danger me-2"></i>Arok Sports Arena</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. TC Khusus & Fisik -->
+                    <div class="col-md-6">
+                        <div class="card bg-white bg-opacity-10 border-white border-opacity-25 h-100 p-4 text-white hover-card shadow d-flex flex-column">
+                            <div class="d-flex align-items-start justify-content-between mb-3 flex-wrap gap-2">
+                                <h3 class="fw-bold mb-0">TC Fisik</h3>
+                                <span class="badge bg-danger text-white px-3 py-2 fs-7 rounded-pill" style="background-color: #d9534f !important;">Intensitas Tinggi</span>
+                            </div>
+                            <hr class="border-white border-opacity-25 mt-2">
+                            <p class="opacity-75 mb-4">
+                                Kelas khusus latihan pembentukan VO2 Max (stamina fisik keras).
+                            </p>
+                            
+                            <div class="mt-auto bg-dark bg-opacity-50 rounded p-3 border border-white border-opacity-10">
+                                <h6 class="text-danger fw-bold mb-2"><i class="far fa-calendar-alt me-2"></i>JADWAL & LOKASI</h6>
+                                <p class="mb-1 small"><i class="fas fa-check-circle text-success me-2"></i>Sabtu (14.00 - 17.00) - <strong>TC Fisik</strong> (Taman Bunga)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. TC Tricking -->
+                    <div class="col-md-6">
+                        <div class="card bg-white bg-opacity-10 border-white border-opacity-25 h-100 p-4 text-white hover-card shadow d-flex flex-column">
+                            <div class="d-flex align-items-start justify-content-between mb-3 flex-wrap gap-2">
+                                <h3 class="fw-bold mb-0">TC Tricking</h3>
+                                <span class="badge bg-info text-dark px-3 py-2 fs-7 rounded-pill">Freestyle</span>
+                            </div>
+                            <hr class="border-white border-opacity-25 mt-2">
+                            <p class="opacity-75 mb-4">
+                                Kelas dinamis yang menggabungkan teknik dasar tendangan Taekwondo dengan gerakan akrobatik ekstrim dan salto, dikhususkan untuk atlet Poomsae Freestyle.
+                            </p>
+                            
+                            <div class="mt-auto bg-dark bg-opacity-50 rounded p-3 border border-white border-opacity-10">
+                                <h6 class="text-danger fw-bold mb-2"><i class="far fa-calendar-alt me-2"></i>JADWAL & LOKASI</h6>
+                                <p class="mb-1 small"><i class="fas fa-check-circle text-success me-2"></i>Minggu (15.30 - 17.30) - <strong>Akrobatik</strong></p>
+                                <p class="mb-0 text-white-50 small"><i class="fas fa-map-marker-alt text-danger me-2"></i>Arok Sports Arena</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Catatan Seragam -->
+                <div class="mt-4 p-3 rounded bg-warning bg-opacity-10 border border-warning border-opacity-50 text-white small text-center shadow">
+                    <i class="fas fa-exclamation-triangle me-2 text-warning"></i> <strong>Pemberitahuan:</strong> Khusus untuk seluruh sesi <i>Training Camp</i> (TC), atlet <strong>TIDAK</strong> diwajibkan memakai Dobok (Seragam Taekwondo). Silakan gunakan pakaian olahraga / <i>training</i> standar yang nyaman.
+                </div>
+
+                <!-- Tombol Action Daftar -->
+                <div class="text-center mt-5 pt-3">
+                    <a href="https://wa.me/6282132932158" target="_blank" class="btn btn-success rounded-pill px-5 py-3 fw-bold fs-5 shadow-lg hover-card">
+                        <i class="fab fa-whatsapp me-2"></i> Daftar Seleksi Training Camp
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center bg-white mt-auto w-100">
+        <div class="text-center p-3 text-dark">
+            © 2026 Copyright <strong>Arok Taekwondo</strong> - All rights reserved.
+        </div>
+    </footer>
+    
+</body>
+</html>

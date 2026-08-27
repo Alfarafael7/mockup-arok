@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Progress Tracker - Arok Taekwondo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+    .navbar-text {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 10px;
+    }
+    .navbar-text:hover {
+        transform: translateY(-3px);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    }
+    .hover-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 10px;
+    }
+    .hover-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.4) !important;
+    }
+    /* Tema Sporty (Gelap-Merah) */
+    .bg-gradient-sport {
+        background: linear-gradient(#1a1a1a, #4a0e0e, #1a1a1a);
+    }
+    /* Kustomisasi Box Data Anak (Glassmorphism) */
+    .tracker-info-box {
+        background-color: rgba(255, 255, 255, 0.05); 
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+    }
+    /* Styling khusus untuk progress bar agar lebih membulat */
+    .progress {
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 10px;
+    }
+    </style>
+</head>
+<body class="d-flex flex-column bg-gradient-sport" style="min-height: 100vh; font-family: 'Inter', sans-serif;">
+    
+    <!-- Navbar Responsif -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark" style="background-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+      <div class="container-fluid px-4 px-md-5"> <!-- Jarak margin kiri-kanan yang responsif -->
+        
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/logo-head.png" alt="Arok Taekwondo Logo" style="width: 60px">
+        </a>
+
+        <!-- Tombol Hamburger untuk Mobile -->
+        <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu Navigasi (Bungkus pembuka tutup menu) -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav gap-2 gap-lg-3 text-center mt-3 mt-lg-0" style="font-size: 18px;">
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text" href="index.html#profile">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text" href="index.html#structure">Coaches</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text" href="index.html#classes">Classes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text" href="index.html#events">Achievements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text fw-bold border-bottom border-2" href="index.html#progress">Progress</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white navbar-text" href="index.html#contacts">Contacts</a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+
+    <!-- Header Halaman -->
+    <div class="container text-white text-center mt-5 pt-3 mb-5">
+        <h1 class="display-5 fw-bold" style="font-family: 'Inter', sans-serif;">Rapor Perkembangan Atlet</h1>
+        <p class="fs-5 opacity-75 mt-3">Pantau secara transparan rekapitulasi kehadiran dan peningkatan kemampuan anak.</p>
+    </div>
+
+    <!-- Data Atlet -->
+    <div class="container pb-5 mb-5">
+        
+        <div class="row align-items-center justify-content-center">
+            
+            <!-- Kolom Foto Kiri (Sama seperti Pelatih) -->
+            <div class="col-md-3 text-center text-md-end pe-md-4 mb-4 mb-md-0">
+                <div class="position-relative d-inline-block">
+                    <!-- Ganti dengan pas foto atlet -->
+                    <img src="assets/shendy-dummy.JPG" alt="Foto Atlet" class="img-fluid rounded-4 shadow-lg hover-card" style="width: 100%; max-width: 260px; aspect-ratio: 3/4; object-fit: cover; border: 3px solid #d9534f;">
+                    <!-- Badge Status Aktif -->
+                    <span class="position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle" title="Status Aktif">
+                        <span class="visually-hidden">Aktif</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Kolom Info Kanan -->
+            <div class="col-md-8">
+                <div class="p-4 p-md-5 rounded-4 tracker-info-box shadow-lg">
+                    
+                    <!-- Header Info -->
+                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4 border-bottom border-white border-opacity-25 pb-3">
+                        <div>
+                            <h2 class="fw-bold text-white mb-1">Fawwaz Shendy</h2>
+                            <p class="text-white-50 mb-0">ID Atlet: ARK-2026-0045</p>
+                        </div>
+                        <div class="text-md-end mt-3 mt-md-0">
+                            <!-- Badge Sabuk -->
+                            <div class="d-inline-block bg-danger text-white rounded-pill px-4 py-2 fw-bold shadow-sm border border-white" style="font-size: 0.95rem;">
+                                Sabuk Merah (Geup 2)
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tabel Deskripsi Profil -->
+                    <dl class="row mb-4 text-white fs-6 border-bottom border-white border-opacity-25 pb-3">
+                        <dt class="col-sm-4 text-white-50 mb-2">Kelas Terdaftar</dt>
+                        <dd class="col-sm-8 mb-2 fw-bold text-warning">Reguler (Cadet - Junior - Senior)</dd>
+
+                        <dt class="col-sm-4 text-white-50 mb-2">Tinggi / Berat Badan</dt>
+                        <dd class="col-sm-8 mb-2">165 cm / 55 kg <span class="text-success small ms-2"><i class="fas fa-arrow-up"></i> Ideal</span></dd>
+
+                        <dt class="col-sm-4 text-white-50 mb-2">Fokus Program</dt>
+                        <dd class="col-sm-8 mb-2">Persiapan Ujian (Geup 2) & Pomprov Jatim IV</dd>
+                    </dl>
+
+                    <h5 class="text-white fw-bold mb-4"><i class="fas fa-chart-bar text-danger me-2"></i>Grafik Indikator Perkembangan</h5>
+
+                    <!-- Progress Bar: Kehadiran -->
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="text-white fw-bold">Jumlah Kehadiran (Bulan Ini)</span>
+                            <span class="text-white">6 / 8 Pertemuan</span>
+                        </div>
+                        <div class="progress" style="height: 12px;">
+                            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar: Teknik -->
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="text-white fw-bold">Perkembangan Teknik</span>
+                            <span class="text-warning">85% - Sangat Baik</span>
+                        </div>
+                        <p class="text-white-50 small mb-2" style="line-height: 1.4;">Penguasaan kuda-kuda, akurasi tendangan (Dwit Chagi & Dolyo Chagi), dan kelancaran Poomsae Taegeuk 7 & 8.</p>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar: Motorik -->
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="text-white fw-bold">Perkembangan Motorik</span>
+                            <span class="text-info">80% - Baik</span>
+                        </div>
+                        <p class="text-white-50 small mb-2" style="line-height: 1.4;">Stamina fisik, kelincahan gerak kaki (footwork), kecepatan serangan, dan keseimbangan tubuh.</p>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar: Sensorik -->
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="text-white fw-bold">Perkembangan Sensorik</span>
+                            <span class="text-primary">90% - Memuaskan</span>
+                        </div>
+                        <p class="text-white-50 small mb-2" style="line-height: 1.4;">Refleks menangkis, insting membaca pergerakan lawan saat Kyorugi, dan konsentrasi instruksi.</p>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Catatan Pelatih -->
+                    <div class="mt-4 bg-dark bg-opacity-50 p-3 rounded border border-white border-opacity-10">
+                        <h6 class="text-danger fw-bold"><i class="fas fa-comment-dots me-2"></i>Catatan Pelatih:</h6>
+                        <p class="text-white-50 small mb-0 fst-italic">"Bagas menunjukkan peningkatan yang signifikan pada power tendangannya. Perlu sedikit tambahan fokus pada stamina akhir saat simulasi pertandingan ronde ke-3." - Sabeum Alfa</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center bg-white mt-auto w-100">
+        <div class="text-center p-3 text-dark">
+            © 2026 Copyright <strong>Arok Taekwondo</strong> - All rights reserved.
+        </div>
+    </footer>
+    
+</body>
+</html>
